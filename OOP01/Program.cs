@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Common;
 namespace OOP01
 {
     internal class Program
@@ -68,6 +68,12 @@ namespace OOP01
             ////  1.5.2 Overflow Exception
             // 2. Application Exception
 
+            #endregion
+            #region Access modifier 
+            //TypeA typeA=new TypeA();
+            // typeA.X = 5; not acess
+            //typeA.Y = 5; not access
+            //typeA.Z = 10; //can access 
             #endregion
         }
     }

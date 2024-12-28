@@ -29,6 +29,12 @@ namespace Ass
         Delete=4,
         Execute=8
     }
+    enum Color
+    {
+        Red,
+        Green,
+        Blue
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -88,6 +94,57 @@ namespace Ass
             //Console.WriteLine(permissions);
 
             #endregion
+            #region Q4:Create an enum called "Colors" with the basic colors (Red, Green, Blue) as its members. Write a C# program that takes a color name as input from the user and displays a message indicating whether the input color is a primary color or not.
+
+            //bool f=false;
+            //Console.Write("Enter Color:");
+            //string color = Console.ReadLine();
+            //Color primaryColor;
+            //f = Enum.TryParse<Color>(color,true, out primaryColor);
+            //if (f)
+            //{
+            //    Console.WriteLine($"{color} is a primary color");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"{color} is not  a primary color");
+            //}
+            #endregion
+            #region Q5:Create a struct called "Point" to represent a 2D point with properties "X" and "Y". Write a C# program that takes two points as input from the user and calculates the distance between them.
+            //bool f=false;
+            //double x1, x2, y1, y2;
+            //do {
+            //    Console.Write("Enter X of point1 :");
+            //    f= double.TryParse(Console.ReadLine(), out x1);
+            //} while (!f);
+            //f = false;
+            //do
+            //{
+            //    Console.Write("Enter Y of point1 :");
+            //    f = double.TryParse(Console.ReadLine(), out y1);
+            //} while (!f);
+            //Point point1 = new Point(x1,y1);
+
+            //f = false;
+            //do
+            //{
+            //    Console.Write("Enter X of point2 :");
+            //    f = double.TryParse(Console.ReadLine(), out x2);
+            //} while (!f);
+            //f = false;
+            //do
+            //{
+            //    Console.Write("Enter Y of point2 :");
+            //    f = double.TryParse(Console.ReadLine(), out y2);
+            //} while (!f);
+         
+            //Point point2 = new Point(x2,y2);
+   
+            //double distance = Point.CalcDistince(point1,point2);
+            //Console.WriteLine($"The distance between the two points is: {distance}");
+            #endregion
         }
     }
+   
 }
+

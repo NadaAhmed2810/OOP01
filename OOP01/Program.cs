@@ -2,6 +2,7 @@
 using Common;
 namespace OOP01
 {
+
     enum Gender:int
     {
         Male,Female
@@ -29,6 +30,21 @@ namespace OOP01
     {
         NaseCity,Maadi=251,Dokki,Alex,Enhass,smartVillage
     }
+    [Flags]
+    enum permissions:byte
+    {
+        Delete=1,Execute=2,Read=4,Write=8
+    }
+    class Employee
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public Gender Gender;//Male ,Female
+       public permissions permissions;                     
+
+    }
+
     internal class Program
     {
         public static void DoSomeCode()
@@ -141,13 +157,28 @@ namespace OOP01
             //Console.WriteLine(result);
             #endregion
             #endregion
+            #region permissions
+            //Employee employee = new Employee();
+            //employee.Name = "Nada";
+            //employee.Gender = Gender.Female;
+            //employee.Age = 20;
+            //// employee.permissions = permissions.Delete;
+            //employee.permissions = (permissions)3;
+            //Console.WriteLine(employee.permissions);
+            ////Add permission XOR
+            //employee.permissions = employee.permissions ^ (permissions.Read);
+            //Console.WriteLine(employee.permissions);
+            //employee.permissions = employee.permissions ^ (permissions.Read);
+            //Console.WriteLine(employee.permissions);
+            //if((employee.permissions & (permissions.Read)) == 0)
+            //{
+            //    employee.permissions ^=permissions.Read;
+            //}
+            //Console.WriteLine(employee.permissions);
+            ////best way 
+            //employee.permissions |= permissions.Read;
+            #endregion
         }
     }
-    class Employee
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public Gender Gender;//Male ,Female 
-    }
+
 }

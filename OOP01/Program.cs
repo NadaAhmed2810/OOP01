@@ -178,6 +178,19 @@ namespace OOP01
             ////best way 
             //employee.permissions |= permissions.Read;
             #endregion
+            #region struct
+            //point p=new point();
+            //Console.WriteLine(p.x);//in valid if i delete default constructor
+            //p.x = 10;
+            //p.y = 5;
+            //Console.WriteLine(p.y);
+            //p=new point(10,5);
+            ////Console.WriteLine(p.y);
+            ////Console.WriteLine(p.x);
+            //Console.WriteLine(p);//OOP01.point
+            //Console.WriteLine(p.ToString());//OOP01.point
+            //point p2 = new();
+            #endregion
         }
     }
 

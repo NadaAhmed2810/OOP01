@@ -2,6 +2,33 @@
 using Common;
 namespace OOP01
 {
+    enum Gender:int
+    {
+        Male,Female
+    }
+    enum Days
+    {
+        Saturday,
+        Sunday,
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday
+    }
+    enum Grades
+    {
+        A,B,C,D,F
+
+    }
+    enum Role
+    {
+        Admin,viewe,Editor
+    }
+    enum Branches:byte
+    {
+        NaseCity,Maadi=251,Dokki,Alex,Enhass,smartVillage
+    }
     internal class Program
     {
         public static void DoSomeCode()
@@ -56,7 +83,7 @@ namespace OOP01
         static void Main(string[] args)
         {
             #region Exception Handling 
-            DoSomeprotectiveCode();
+            //DoSomeprotectiveCode();
             //Exceptions
             // 1. System Exceptions
             //// 1.1 Format Exception
@@ -75,6 +102,52 @@ namespace OOP01
             //typeA.Y = 5; not access
             //typeA.Z = 10; //can access 
             #endregion
+            #region Enum
+            #region  Ex01
+            //String Day = "Saturday";//"Hamada"
+            //Days day = Days.Saturday;
+            //Grades grade = Grades.A;
+            ////if(grade=='A')
+            //if(grade == Grades.A)
+            //{
+            //    Console.WriteLine(":)");
+            //}
+            //else
+            //{
+            //    Console.WriteLine(":(");
+            //}
+
+            #endregion
+            #region Ex02
+            //Grades grade = (Grades)2;//explicit Casting[unsafe]
+            //Console.WriteLine(grade);
+            //Admin,viewer,Editor
+
+
+            #endregion
+            #region Ex03
+            // Grades grade =(Grades) Enum.Parse(typeof(Grades),Console.ReadLine());//return object
+            // Enum.TryParse(typeof(Grades),Console.ReadLine(), out object result);
+            //// Grades grade = Grades(result);
+            // Console.WriteLine(result);
+
+            #endregion
+            #region Ex04
+            //string g = "male";
+            //Enum.TryParse(typeof(Gender),g,out object result);
+            //Console.WriteLine(result);
+            //string g = "male";
+            //Enum.TryParse<Gender>(g, true, out Gender result);
+            //Console.WriteLine(result);
+            #endregion
+            #endregion
         }
+    }
+    class Employee
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public Gender Gender;//Male ,Female 
     }
 }

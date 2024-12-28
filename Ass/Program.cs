@@ -21,6 +21,14 @@ namespace Ass
         Autumn,
         Winter
     }
+    [Flags]
+    enum Permissions
+    {
+        Read=1,
+        Write=2,
+        Delete=4,
+        Execute=8
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -59,6 +67,25 @@ namespace Ass
             //}
 
 
+
+            #endregion
+            #region Q3:Assign the following Permissions (Read, write, Delete, Execute) in a form of Enum.
+            //Permissions permissions=new Permissions();
+            ////To Add All permissions 
+            //Console.WriteLine("Add ALL Permissions Expect Execute Without Check :");
+            //permissions |= (Permissions)7;
+            //Console.WriteLine(permissions);
+            ////remove Read permission with Check
+            //if ((permissions & Permissions.Read) != 0)
+            //{
+            //    permissions ^= Permissions.Read;
+            //}
+            //Console.WriteLine("Remove Read Permission After Check :");
+            //Console.WriteLine(permissions);
+            ////Remove Execute Permission Without Check
+            //Console.WriteLine("Remove Execute Permission Without Check :");
+            //permissions &= ~Permissions.Execute;
+            //Console.WriteLine(permissions);
 
             #endregion
         }
